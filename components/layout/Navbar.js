@@ -1,3 +1,4 @@
+import Button from "../Button";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -10,8 +11,18 @@ export default function Navbar() {
         fontSize: "24px",
       }}
     >
-      <Link href="/">Hem</Link>
-      <Link href="about">About</Link>
+      <Button>
+        <Link href="/" passHref>
+          <div>
+            <p>
+              <a href="">Home</a>
+            </p>
+          </div>
+        </Link>
+      </Button>
+      <Button>
+        <Link href="about">About</Link>
+      </Button>
       <Link href="pokemon">Pokemon</Link>
     </nav>
   );
